@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite';
 import icon from 'astro-icon';
 import sitemap from '@astrojs/sitemap';
 
-import homeData from './src/data/home.json';
+import homeData from './src/data/es/home.json';
 
 
 const siteUrl = process.env.SITE_URL || homeData.siteUrl || undefined;

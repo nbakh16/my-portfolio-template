@@ -5,7 +5,7 @@
     "images": [],
     "tech": ["React Native", "JavaScript", "REST APIs"],
     "platforms": ["apple-ios", "android"],
-    "link": "https://github.com/INOTJuannnka",
+    "link": "https://github.com/INOTJuannnka/MyMobileApp-TODO",
     "category": "Desarrollo Móvil"
   },
   {
@@ -14,7 +14,7 @@
     "images": [],
     "tech": ["React", "Node.js", "Python", "Machine Learning", "Docker"],
     "platforms": ["web"],
-    "link": "https://github.com/INOTJuannnka",
+    "link": "https://github.com/INOTJuannnka/Terra-Smart-TODO",
     "category": "IoT & Web"
   },
   {
@@ -23,7 +23,7 @@
     "images": [],
     "tech": ["Java", "Spring Boot", "PostgreSQL", "REST APIs"],
     "platforms": ["web", "api"],
-    "link": "https://github.com/INOTJuannnka",
+    "link": "https://github.com/INOTJuannnka/MyBill-TODO",
     "category": "Backend Development"
   },
   {
@@ -32,7 +32,7 @@
     "images": [],
     "tech": ["Node.js", "Docker", "Cybersecurity", "REST APIs"],
     "platforms": ["api", "linux"],
-    "link": "https://github.com/INOTJuannnka",
+    "link": "https://github.com/INOTJuannnka/IoT-Security-TODO",
     "category": "IoT & Cybersecurity"
   }
 ]

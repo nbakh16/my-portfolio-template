@@ -3,42 +3,40 @@
     {
       "title": "Mobile & Frontend",
       "skills": [
-        { "name": "React Native", "level": 3, "icon": "skill-icons:react-dark" },
-        { "name": "React", "level": 3, "icon": "skill-icons:react-dark" },
-        { "name": "JavaScript (ES6+)", "level": 3, "icon": "skill-icons:javascript" },
-        { "name": "HTML5", "level": 3, "icon": "skill-icons:html" },
-        { "name": "CSS3", "level": 3, "icon": "skill-icons:css" }
+        { "name": "React Native", "level": 3, "icon": "devicon:react" },
+        { "name": "React", "level": 3, "icon": "devicon:react" },
+        { "name": "JavaScript (ES6+)", "level": 3, "icon": "devicon:javascript" },
+        { "name": "HTML5", "level": 3, "icon": "devicon:html5" },
+        { "name": "CSS3", "level": 3, "icon": "devicon:css3" }
       ]
     },
     {
       "title": "Backend",
       "skills": [
-        { "name": "Node.js", "level": 3, "icon": "skill-icons:nodejs-dark" },
-        { "name": "Express.js", "level": 2, "icon": "skill-icons:expressjs-dark" },
+        { "name": "Node.js", "level": 3, "icon": "devicon:nodejs" },
+        { "name": "Express.js", "level": 2, "icon": "devicon:express" },
         { "name": "Django", "level": 2, "icon": "skill-icons:django" },
-        { "name": "Java Spring Boot", "level": 2, "icon": "skill-icons:spring-dark" },
-        { "name": "Python", "level": 2, "icon": "skill-icons:python-dark" }
+        { "name": "Java Spring Boot", "level": 2, "icon": "devicon:spring" },
+        { "name": "Python", "level": 2, "icon": "devicon:python" }
       ]
     },
     {
       "title": "Bases de Datos & DevOps",
       "skills": [
-        { "name": "PostgreSQL", "level": 2, "icon": "skill-icons:postgresql-dark" },
-        { "name": "MongoDB", "level": 2, "icon": "skill-icons:mongodb" },
-        { "name": "Docker", "level": 2, "icon": "skill-icons:docker" },
-        { "name": "Git", "level": 3, "icon": "skill-icons:git" }
+        { "name": "PostgreSQL", "level": 2, "icon": "devicon:postgresql" },
+        { "name": "MongoDB", "level": 2, "icon": "devicon:mongodb" },
+        { "name": "Docker", "level": 2, "icon": "devicon:docker" },
+        { "name": "Git", "level": 3, "icon": "devicon:git" }
       ]
     },
     {
-      "title": "Organización & IA",
+      "title": "Tools & AI-Assisted Dev",
       "skills": [
         { "name": "Metodologías Ágiles", "level": 3, "icon": "mdi:account-group" },
         { "name": "Trello", "level": 3, "icon": "devicon:trello" },
         { "name": "Slack", "level": 3, "icon": "devicon:slack" },
-        { "name": "ChatGPT", "level": 3, "icon": "mdi:robot-outline" },
-        { "name": "Claude", "level": 3, "icon": "mdi:robot-outline" },
-        { "name": "Gemini", "level": 3, "icon": "mdi:robot-outline" },
-        { "name": "Opencode / Copilot", "level": 2, "icon": "devicon:github" }
+        { "name": "GitHub Copilot", "level": 3, "icon": "devicon:github" },
+        { "name": "AI Tools (ChatGPT, Claude)", "level": 3, "icon": "mdi:robot-outline" }
       ]
     }
   ]
