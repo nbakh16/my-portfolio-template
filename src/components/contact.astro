@@ -1,6 +1,20 @@
 ---
 import { Icon } from 'astro-icon/components';
-import localData from '../data/home.json';
+import { useTranslations } from '../utils/i18n';
+
+interface Props {
+  lang: 'es' | 'en';
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+
+let localData;
+try {
+  localData = (await import(`../data/${lang}/home.json`)).default;
+} catch (e) {
+  localData = (await import(`../data/es/home.json`)).default;
+}
 ---
 
 <section id="contact" class="section-container">
@@ -8,10 +22,10 @@ import localData from '../data/home.json';
     <div class="space-y-12">
       <div class="contact-header opacity-0">
         <h2 class="text-3xl md:text-4xl font-heading font-bold text-maintext mb-2 flex items-center gap-4">
-          <span class="text-accent">/</span> Contact Me
+          <span class="text-accent">/</span> {t('contact.title')}
         </h2>
         <p class="text-subtext font-body text-sm max-w-md">
-          Feel free to reach out. I'm always open to discussing new projects and opportunities.
+          {t('contact.description')}
         </p>
       </div>
 
@@ -36,16 +50,14 @@ import localData from '../data/home.json';
                 {social.url.replace('https://', '').replace('mailto:', '').replace('wa.me/', '+')}
               </p>
               <span class="inline-flex items-center gap-1 text-[10px] uppercase tracking-widest text-accent/70 font-mono border border-accent/20 rounded-full px-2.5 py-0.5 group-hover:border-accent/40 group-hover:text-accent transition-colors duration-300">
-                {social.label || 'Connect'}
+                {t('contact.connect')}
               </span>
             </a>
           );
         })}
       </div>
 
-      <p class="contact-preferred opacity-0 text-center text-subtext text-xs font-body pt-2">
-        Preferred: <span class="text-accent/80">Email</span> or <span class="text-accent/80">LinkedIn</span> — I typically respond within 24 hours.
-      </p>
+      <p class="contact-preferred opacity-0 text-center text-subtext text-xs font-body pt-2" set:html={t('contact.preferred')} />
     </div>
   </div>
 </section>

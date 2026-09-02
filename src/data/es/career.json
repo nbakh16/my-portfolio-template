@@ -1,0 +1,34 @@
+[
+  {
+    "company": "Startup de Seguridad IoT",
+    "role": "Desarrollador Backend",
+    "period": "Jul 2025 - Dic 2025",
+    "type": "Proyecto Académico / Práctica",
+    "description": "Diseño e implementación de un prototipo centrado en mejorar la seguridad en entornos IoT. Desarrollo de servicios backend con Node.js, contenerización con Docker y diseño de arquitectura de red segura.",
+    "skills": ["Node.js", "Docker", "REST APIs", "Ciberseguridad", "Arquitectura IoT"]
+  },
+  {
+    "company": "Terra-Smart (PhantomSecure / SumoThings)",
+    "role": "Desarrollador Full Stack & Scrum Master",
+    "period": "Ene 2025 - Jun 2025",
+    "type": "Proyecto Colaborativo",
+    "description": "Desarrollo de plataforma web inteligente para monitoreo de parámetros de suelo (nitrógeno, pH, humedad) integrando dispositivos IoT. Implementación de modelos de Machine Learning para recomendaciones automáticas de fertilización.",
+    "skills": ["React", "Node.js", "Python", "Machine Learning", "Scrum"]
+  },
+  {
+    "company": "SENA / Clientes Independientes",
+    "role": "Técnico en Redes & Infraestructura",
+    "period": "Proyectos Independientes",
+    "type": "Freelance",
+    "description": "Instalación y configuración de redes residenciales, incluyendo cableado estructurado, configuración de routers y diagnóstico de conectividad (LAN/Wi-Fi).",
+    "skills": ["Redes LAN/WAN", "TCP/IP", "Routers/Switches", "Cisco CCNA"]
+  },
+  {
+    "company": "Universidad del Cauca",
+    "role": "Estudiante de Ingeniería de Sistemas",
+    "period": "Graduación esperada: 2026",
+    "type": "Estudiante",
+    "description": "Formación integral con fuerte enfoque en desarrollo móvil (React Native) y arquitectura de software. Desarrollo de aplicaciones móviles aplicando consumo de APIs y principios mobile-first.",
+    "skills": ["React Native", "Desarrollo Móvil", "JavaScript", "Java", "Ingeniería de Software"]
+  }
+]

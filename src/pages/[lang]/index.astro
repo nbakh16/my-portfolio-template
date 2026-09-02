@@ -1,0 +1,59 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Nav from "../../components/nav.astro";
+import Home from "../../components/home.astro";
+import Tech from "../../components/tech.astro";
+import Projects from "../../components/projects.astro";
+import Contact from "../../components/contact.astro";
+import Footer from "../../components/footer.astro";
+import Career from "../../components/career.astro";
+import { getLangFromUrl } from "../../utils/i18n";
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'es' } },
+    { params: { lang: 'en' } },
+  ];
+}
+
+const { lang } = Astro.params;
+let localData;
+try {
+  localData = (await import(`../../data/${lang}/home.json`)).default;
+} catch (e) {
+  localData = (await import(`../../data/es/home.json`)).default;
+}
+
+const {
+  name,
+  webpageTitle,
+  description,
+  jobTitle,
+  keywords,
+  siteUrl,
+  twitterHandle,
+  ogImageUrl,
+  socials,
+} = localData;
+---
+
+<Layout
+  title={webpageTitle}
+  personName={name}
+  description={description}
+  jobTitle={jobTitle}
+  keywords={keywords}
+  siteUrl={siteUrl}
+  twitterHandle={twitterHandle}
+  ogImageUrl={ogImageUrl}
+  lang={lang}
+  socials={socials}
+>
+  <Nav lang={lang} />
+	<Home lang={lang} />
+	<Career lang={lang} />
+	<Projects lang={lang} />
+	<Tech lang={lang} />
+	<Contact lang={lang} />
+	<Footer lang={lang} />
+</Layout>

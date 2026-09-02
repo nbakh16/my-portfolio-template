@@ -1,6 +1,15 @@
 ---
 import { Icon } from 'astro-icon/components';
 import ThemeToggle from './theme-toggle.astro';
+import { useTranslations } from '../utils/i18n';
+
+interface Props {
+  lang: 'es' | 'en';
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+
 interface NavItem {
   label: string;
   href: string;
@@ -9,45 +18,48 @@ interface NavItem {
 
 const navItems: NavItem[] = [
   {
-    label: "Home",
+    label: t('nav.home'),
     href: "#home",
     icon: `mdi:home`,
   },
   {
-    label: "Career",
+    label: t('nav.career'),
     href: "#career",
     icon: `mdi:work`,
   },
   {
-    label: "Projects",
+    label: t('nav.projects'),
     href: "#projects",
     icon: `mdi:computer`,
   },
   {
-    label: "Skills",
+    label: t('nav.skills'),
     href: "#skills",
     icon: `mdi:chart-bar`,
   },
-  // {
-  //   label: "Education",
-  //   href: "#contact",
-  //   icon: `mdi:message`,
-  // },
   {
-    label: "Contact",
+    label: t('nav.contact'),
     href: "#contact",
     icon: `mdi:message`,
   }
 ];
+
+// Determine the URL for the other language
+const switchLang = lang === 'es' ? 'en' : 'es';
+const switchLangUrl = `/${switchLang}/`;
 ---
-<div id="theme-toggle-wrapper" class="fixed top-4 right-4 z-50 md:top-4 md:right-4 reveal-content" style="animation-delay: 700ms;">
+
+<div id="theme-toggle-wrapper" class="fixed top-4 right-4 z-50 flex items-center gap-3 transition-transform duration-300">
+  <a href={switchLangUrl} class="px-2 py-1 bg-background border border-accent/20 rounded-lg text-xs font-bold text-maintext uppercase hover:bg-accent/10 hover:text-accent transition-colors">
+    {switchLang}
+  </a>
   <ThemeToggle />
 </div>
 
-<div class="flex justify-center w-full">
+<div class="fixed top-2 md:top-6 left-0 right-0 z-50 flex justify-center pointer-events-none px-4">
   <nav
     id="main-nav"
-    class="fixed left-1/2 -translate-x-1/2 z-20 border-[1.2px] border-transparent transition-all duration-500 ease-in-out md:top-6 md:bottom-auto bottom-0 w-[80%]"
+    class="pointer-events-auto bg-background/5 border border-accent/20 rounded-full px-2 py-1 shadow-lg w-full max-w-[90%] md:max-w-2xl lg:max-w-3xl flex justify-between items-center"
   >
     <div class="container mx-auto flex justify-center items-center p-3 reveal-content" style="animation-delay: 700ms;">
       <ul
@@ -68,7 +80,7 @@ const navItems: NavItem[] = [
                   />
                 </span>
                 <span class="hidden md:inline-block">{item.label}</span>
-                <span class="md:hidden text-xs">{item.label}</span>
+                <span class="md:hidden text-xs truncate max-w-full">{item.label}</span>
               </a>
             </li>
           ))

@@ -1,0 +1,41 @@
+{
+  "name": "Julián Camilo Carvajal",
+  "photoUrl": "favicon.svg",
+  "location": "Popayán, Colombia (Remote)",
+  "availability": "Available for entry-level positions",
+  "description": "Junior Developer focused on Mobile (React Native) and Full Stack (Node.js, React). Systems Engineering student passionate about building high-impact products.",
+  "descriptionHtml": "Junior Developer with a strong focus on <span class='text-accent font-bold'>Mobile Development (React Native)</span> and <span class='text-accent font-bold'>Full Stack</span> (Node.js, React). Passionate about creating efficient, scalable, and user-centric solutions.",
+  "webpageTitle": "Julián Camilo | Mobile & Full Stack Developer",
+  "resumeUrl": "https://www.linkedin.com/in/julian-camilo-carvajal-mejia",
+  "_seo_comment": "SEO fields — update these along with your personal info for best search engine visibility.",
+  "jobTitle": "Junior Mobile & Full Stack Developer",
+  "keywords": "Julián Camilo Carvajal Mejia, Mobile Developer, Full Stack, React Native, Node.js, React, Portfolio",
+  "siteUrl": "https://your-domain.com",
+  "lang": "en",
+  "twitterHandle": "",
+  "ogImageUrl": "/placeholder.jpeg",
+  "_comment": "Add your social links below.",
+  "socials": [
+    {
+      "name": "GitHub",
+      "url": "https://github.com/INOTJuannnka",
+      "icon": "mdi:github",
+      "label": "View Profile",
+      "showInContact": true
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com/in/julian-camilo-carvajal-mejia",
+      "icon": "mdi:linkedin",
+      "label": "Connect",
+      "showInContact": true
+    },
+    {
+      "name": "Email",
+      "url": "mailto:jucarvajal2000@gmail.com",
+      "icon": "mdi:email",
+      "label": "Send Email",
+      "showInContact": true
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "categories": [
+    {
+      "title": "Mobile & Frontend",
+      "skills": [
+        { "name": "React Native", "level": 3, "icon": "skill-icons:react-dark" },
+        { "name": "React", "level": 3, "icon": "skill-icons:react-dark" },
+        { "name": "JavaScript (ES6+)", "level": 3, "icon": "skill-icons:javascript" },
+        { "name": "HTML5", "level": 3, "icon": "skill-icons:html" },
+        { "name": "CSS3", "level": 3, "icon": "skill-icons:css" }
+      ]
+    },
+    {
+      "title": "Backend",
+      "skills": [
+        { "name": "Node.js", "level": 3, "icon": "skill-icons:nodejs-dark" },
+        { "name": "Express.js", "level": 2, "icon": "skill-icons:expressjs-dark" },
+        { "name": "Django", "level": 2, "icon": "skill-icons:django" },
+        { "name": "Java Spring Boot", "level": 2, "icon": "skill-icons:spring-dark" },
+        { "name": "Python", "level": 2, "icon": "skill-icons:python-dark" }
+      ]
+    },
+    {
+      "title": "Databases & DevOps",
+      "skills": [
+        { "name": "PostgreSQL", "level": 2, "icon": "skill-icons:postgresql-dark" },
+        { "name": "MongoDB", "level": 2, "icon": "skill-icons:mongodb" },
+        { "name": "Docker", "level": 2, "icon": "skill-icons:docker" },
+        { "name": "Git", "level": 3, "icon": "skill-icons:git" }
+      ]
+    },
+    {
+      "title": "Organization & AI",
+      "skills": [
+        { "name": "Agile Methodologies", "level": 3, "icon": "mdi:account-group" },
+        { "name": "Trello", "level": 3, "icon": "devicon:trello" },
+        { "name": "Slack", "level": 3, "icon": "devicon:slack" },
+        { "name": "ChatGPT", "level": 3, "icon": "mdi:robot-outline" },
+        { "name": "Claude", "level": 3, "icon": "mdi:robot-outline" },
+        { "name": "Gemini", "level": 3, "icon": "mdi:robot-outline" },
+        { "name": "Opencode / Copilot", "level": 2, "icon": "devicon:github" }
+      ]
+    }
+  ]
+}

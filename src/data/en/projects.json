@@ -1,0 +1,38 @@
+[
+  {
+    "title": "MyMobile App (Academic Projects)",
+    "description": "Mobile applications developed with React Native, focused on usability, high performance, and mobile-first design principles, consuming REST APIs.",
+    "images": [],
+    "tech": ["React Native", "JavaScript", "REST APIs"],
+    "platforms": ["apple-ios", "android"],
+    "link": "https://github.com/INOTJuannnka",
+    "category": "Mobile Development"
+  },
+  {
+    "title": "Terra-Smart",
+    "description": "IoT platform for smart soil monitoring, integrating real-time sensors with Machine Learning models (Random Forest) to recommend fertilizers.",
+    "images": [],
+    "tech": ["React", "Node.js", "Python", "Machine Learning", "Docker"],
+    "platforms": ["web"],
+    "link": "https://github.com/INOTJuannnka",
+    "category": "IoT & Web"
+  },
+  {
+    "title": "MyBill - Financial System",
+    "description": "Backend services for a financial platform focused on risk analysis and billing, implemented with a microservices-oriented architecture in Java Spring Boot.",
+    "images": [],
+    "tech": ["Java", "Spring Boot", "PostgreSQL", "REST APIs"],
+    "platforms": ["web", "api"],
+    "link": "https://github.com/INOTJuannnka",
+    "category": "Backend Development"
+  },
+  {
+    "title": "IoT Security Prototype",
+    "description": "Design and implementation of backend services for secure communication and authentication between IoT devices using Node.js and Docker containers.",
+    "images": [],
+    "tech": ["Node.js", "Docker", "Cybersecurity", "REST APIs"],
+    "platforms": ["api", "linux"],
+    "link": "https://github.com/INOTJuannnka",
+    "category": "IoT & Cybersecurity"
+  }
+]

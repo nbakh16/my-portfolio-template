@@ -1,8 +1,11 @@
 ---
 import { Icon } from 'astro-icon/components';
-const { project } = Astro.props;
 import { Image } from 'astro:assets';
 import { resolveAssetImage } from '../utils/images';
+import { useTranslations } from '../utils/i18n';
+
+const { project, lang = 'es' } = Astro.props;
+const t = useTranslations(lang);
 
 // Map through the array of image strings from project JSON
 const optimizedImages = await Promise.all(
@@ -116,7 +119,7 @@ const platformIconMap: Record<string, string> = {
       target="_blank"
       class="mt-1 flex items-center justify-center gap-2 w-full py-2 rounded-lg border border-accent/20 text-accent/70 hover:text-accent hover:border-accent/60 hover:bg-accent/5 transition-all duration-300 text-xs font-body font-semibold tracking-wide"
     >
-      View Project
+      {t('projects.view_project')}
       <Icon name="mdi:arrow-right" class="w-3.5 h-3.5" />
     </a>
   </div>

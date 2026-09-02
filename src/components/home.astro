@@ -1,8 +1,15 @@
 ---
 import { Icon } from 'astro-icon/components';
-import localData from '../data/home.json';
 import { resolveAssetImage } from '../utils/images';
 import { Image } from 'astro:assets';
+import { useTranslations } from '../utils/i18n';
+
+interface Props {
+  lang: 'es' | 'en';
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
 
 //Data Definitions
 interface Social {
@@ -23,22 +30,11 @@ interface ProfileData {
   socials: Social[];
 }
 
-const isApiLive = import.meta.env.PROD; // Auto true in production
-const BASE_URL = import.meta.env.PUBLIC_API_BASE_URL;
-
 let data: ProfileData; // data as ProfileData
-
-if (isApiLive && BASE_URL) {
-  try {
-    const response = await fetch(`${BASE_URL}/home`);
-    if (!response.ok) throw new Error('Network response was not ok');
-    data = await response.json();
-  } catch (error) {
-    console.error("API Fetch failed, falling back to mock data", error);
-    data = localData as ProfileData;
-  }
-} else {
-  data = localData as ProfileData;
+try {
+  data = (await import(`../data/${lang}/home.json`)).default;
+} catch (e) {
+  data = (await import(`../data/es/home.json`)).default;
 }
 
 const { name, photoUrl, description, descriptionHtml, resumeUrl, jobTitle, location, availability, socials } = data;
@@ -73,7 +69,7 @@ const profileImage = await resolveAssetImage(photoUrl);
 
     <div class="reveal-content" style="animation-delay: 200ms;">
     <p class="font-body font-light text-gray leading-relaxed">
-      Hello, I'm
+      {t('home.hello')}
     </p>
   </div>
 
@@ -127,7 +123,7 @@ const profileImage = await resolveAssetImage(photoUrl);
     >
       <div class="flex flex-col items-center justify-center text-center">
         <span class="tracking-wide text-sm md:text-base font-medium transition-transform duration-300 md:translate-y-2 md:group-hover:translate-y-0">
-          View Resume
+          {t('home.view_resume')}
         </span>
         
         <span class="text-[10px] text-subtext font-light whitespace-nowrap transition-all duration-300 
@@ -135,7 +131,7 @@ const profileImage = await resolveAssetImage(photoUrl);
                      opacity-100 translate-y-0 
                      /* Desktop: Hidden until hover */
                      md:opacity-0 md:translate-y-1 md:group-hover:opacity-100 md:group-hover:translate-y-0">
-          Opens in Google Docs
+          {t('home.open_docs')}
         </span>
       </div>
       

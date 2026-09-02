@@ -1,6 +1,20 @@
 ---
 import { Icon } from 'astro-icon/components';
-import localData from '../data/home.json';
+import { useTranslations } from '../utils/i18n';
+
+interface Props {
+  lang: 'es' | 'en';
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+
+let localData;
+try {
+  localData = (await import(`../data/${lang}/home.json`)).default;
+} catch (e) {
+  localData = (await import(`../data/es/home.json`)).default;
+}
 ---
 
 <footer class="section-container !pt-0 !pb-8">
@@ -11,7 +25,7 @@ import localData from '../data/home.json';
           {localData.name} © 2026
         </p>
         <div class="flex items-center flex-wrap justify-center gap-3 text-subtext text-xs font-body order-1 md:order-2">
-          <span>Built using </span>
+          <span>{t('footer.built_with')}</span>
           <a
             href="https://astro.build/themes/details/career-portfolio-data-driven-astro-ssg/"
             target="_blank"

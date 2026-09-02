@@ -1,0 +1,34 @@
+[
+  {
+    "company": "IoT Security Startup",
+    "role": "Backend Developer",
+    "period": "Jul 2025 - Dec 2025",
+    "type": "Academic Project / Internship",
+    "description": "Design and implementation of a prototype focused on improving security in IoT environments. Developed backend services with Node.js, containerization with Docker, and designed secure network architectures.",
+    "skills": ["Node.js", "Docker", "REST APIs", "Cybersecurity", "IoT Architecture"]
+  },
+  {
+    "company": "Terra-Smart (PhantomSecure / SumoThings)",
+    "role": "Full Stack Developer & Scrum Master",
+    "period": "Jan 2025 - Jun 2025",
+    "type": "Collaborative Project",
+    "description": "Developed a smart web platform for monitoring soil parameters (nitrogen, pH, humidity) by integrating IoT devices. Implemented Machine Learning models for automatic fertilization recommendations.",
+    "skills": ["React", "Node.js", "Python", "Machine Learning", "Scrum"]
+  },
+  {
+    "company": "SENA / Independent Clients",
+    "role": "Network & Infrastructure Technician",
+    "period": "Independent Projects",
+    "type": "Freelance",
+    "description": "Installation and configuration of residential networks, including structured cabling, router configuration, and connectivity troubleshooting (LAN/Wi-Fi).",
+    "skills": ["LAN/WAN Networks", "TCP/IP", "Routers/Switches", "Cisco CCNA"]
+  },
+  {
+    "company": "Universidad del Cauca",
+    "role": "Systems Engineering Student",
+    "period": "Expected Graduation: 2026",
+    "type": "Student",
+    "description": "Comprehensive training with a strong focus on mobile development (React Native) and software architecture. Developed mobile applications applying API consumption and mobile-first principles.",
+    "skills": ["React Native", "Mobile Development", "JavaScript", "Java", "Software Engineering"]
+  }
+]
