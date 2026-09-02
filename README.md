@@ -1,123 +1,73 @@
-# CareerPortfolio: Data-Driven Astro SSG
-Live Demo: [careerportofio.netlify.app](https://careerportofio.netlify.app)
+# Portfolio :briefcase:
 
-[![Astro](https://img.shields.io/badge/Astro-FF5D01?logo=astro&logoColor=white)](https://astro.build/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Contributions Welcome](https://img.shields.io/badge/🤝_Contributions-Welcome-blue)](CONTRIBUTING.md)
+## By: Julián Camilo Carvajal Mejía
 
-A high-performance, responsive portfolio built with **Astro**, **Tailwind CSS**, and **Native Browser Animations**. Designed to be 100% data-driven and easy to customize as a reusable template.
+![Astro](https://img.shields.io/badge/astro-%232C2052.svg?style=for-the-badge&logo=astro&logoColor=white)
+![React Native](https://img.shields.io/badge/react_native-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![Node.js](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Netlify](https://img.shields.io/badge/netlify-%2300C7B7.svg?style=for-the-badge&logo=netlify&logoColor=white)
 
-## 🌟 Highlights
-- **Zero-JS by Default:** Leveraging Astro's islands architecture.
-- **JSON-First:** Update your information in `src/data/` without touching any code.
-- **SEO & AI Ready:** Auto-generated `sitemap.xml`, `robots.txt`, and `/llms.txt` endpoint for AI/LLM crawlers, full Open Graph/Twitter Card support and JSON-LD structured data.
-- **Built-in Themes**: Switch between multiple professional color palettes and light/dark modes from a single config file.
-- **Fully Responsive:** Optimized for mobile, tablet, and desktop.
-- **Performance:** Optimized for perfect Lighthouse scores.
+## Tabla de Contenidos :page_with_curl:
+- [Sobre este Portafolio](#sobre-este-portafolio)
+- [Stack Tecnológico](#stack-tecnológico)
+- [Pasos de Instalación](#pasos-de-instalación)
+- [Características Clave](#características-clave)
+- [Licencia](#licencia)
+- [Contacto](#contacto)
 
-## 🛠️ Tech Stack
-- **Frontend:** [Astro](https://astro.build/) (Static Site Generation)
-- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
-- **Icons:** [Iconify](https://iconify.design/) via `astro-icon`
-- **Deployment:** [Netlify](https://www.netlify.com)
-- **Backend:** [FastAPI](https://fastapi.tiangolo.com/) *(Works without backend — open source release coming soon)*
+## Sobre este Portafolio :book:
+Este repositorio contiene el código fuente de mi portafolio personal y profesional. Es un sitio web estático diseñado para ser extremadamente rápido, accesible y con un alto rendimiento SEO.
 
-## 🚀 Getting Started
-Follow these instructions to get a local copy up and running.
+Su propósito es mostrar mi experiencia como Desarrollador Junior enfocado en tecnologías **Móviles (React Native)** y **Full Stack (Node.js)**, destacando mi participación en proyectos reales y mi capacidad para adaptarme a entornos ágiles.
 
-### Prerequisites
-Make sure you have **Astro v6** and **Node.js** (v22.12.0 or higher) installed on your machine.
+Actualmente desplegado y alojado en **Netlify**.
 
-### Installation
-1. Click **Use this template** on this repository.
-2. Choose **Create a new repository**.
-3. Clone your new repository: `git clone <your-repo-url>`
-4. Navigate to your repo: `cd <your-repo-name>`
-5. Install dependencies: `npm install`
-6. Start development server: `npm run dev`
-7. Update your content in `/src/data/`
-8. Build and deploy on your preferred platform
+## Stack Tecnológico :warning:
+Este proyecto fue construido utilizando las tecnologías modernas del ecosistema web:
 
+* **[Astro](https://astro.build/):** Framework principal para generar un sitio estático optimizado (SSG).
+* **[Tailwind CSS](https://tailwindcss.com/):** Para el estilizado rápido y sistema de diseño responsivo.
+* **i18n:** Implementación de internacionalización (Español/Inglés) mediante enrutamiento dinámico.
+* **Iconify / Devicon:** Para iconos de habilidades unificados.
 
-## 🛠️ How to Customize
-To make this portfolio yours, simply edit the JSON files in `src/data/`.
+## Pasos de Instalación :checkered_flag:
 
-### 🎨 Switching Themes
-This template comes with multiple built-in color palettes. To change the theme of your portfolio, open `src/config.ts` and update the `baseTheme` variable to one of the available options:
+Si deseas correr este proyecto localmente para ver cómo está construido:
 
-```typescript
-export const SITE_CONFIG = {
-  // Options: 'default', 'strategic', 'innovator', 'executive'
-  baseTheme: 'default', 
-};
-```
-*(The template will automatically handle the dark/light mode toggles for whichever base theme you choose!)*
+1.  **Clona el repositorio**
+    ```bash
+    git clone https://github.com/INOTJuannnka/career-portfolio.git
+    cd career-portfolio
+    ```
 
-### 📁 Directory Structure
-```
-├── public/              # Global static assets (placeholder.jpg, favicon)
-├── src/
-│   ├── assets/          # Project & Profile images (Supports automatic Astro optimization)
-│   ├── components/      # Reusable Astro components
-│   ├── data/            # JSON files for project data
-│   ├── layouts/         # Layout templates with Meta tags
-│   ├── pages/           # Site routes (index.astro)
-│   └── styles/          # Global CSS styles
-│   └── config.ts        # Global site configuration
-├── astro.config.mjs     # Astro configuration
-└── tsconfig.json        # TypeScript configuration
-```
+2.  **Instala las dependencias**
+    Necesitas tener Node.js instalado.
+    ```bash
+    npm install
+    ```
 
-### 🔍 SEO & AI Optimization
-All SEO and AI metadata is driven from `src/data/home.json`. Update the fields below to improve search engine, social media and AI crawler visibility:
+3.  **Inicia el servidor de desarrollo**
+    Esto iniciará el servidor local de Astro.
+    ```bash
+    npm run dev
+    ```
+    * El sitio estará disponible en `http://localhost:4321`.
 
-| Field | Description |
-| :------------ | :----------------------------------------------------------- |
-| `siteUrl` | Your deployed domain (e.g. `https://yourname.dev`). Required for canonical URLs, sitemap and absolute OG image links. |
-| `webpageTitle` | Page tab title and Open Graph title tag. |
-| `description` | Primary intro summary used for meta description, Open Graph, Twitter preview cards and `/llms.txt`. |
-| `lang` | Page language code (e.g. `en`, `fr`, `de`). Sets the `<html lang>` attribute. |
-| `jobTitle` | Your role — included in JSON-LD structured data shown to search engines and `/llms.txt`. |
-| `keywords` | Comma-separated keywords for the `<meta name="keywords">` tag. |
-| `twitterHandle` | Your Twitter/X username (with or without `@`). Enables Twitter Card attribution. |
-| `ogImageUrl` | Path to your Open Graph preview image. Use a **1200×630 px** image for best results across all platforms. |
+4.  **Compilar para producción (Opcional)**
+    Para generar la carpeta `dist` optimizada:
+    ```bash
+    npm run build
+    ```
 
-> **Automatic Features:**
-> - `sitemap-index.xml` & `robots.txt`: Auto-generated at build time.
-> - `/llms.txt`: Dynamically generated Markdown portfolio route for AI agents and LLM web crawlers (powered by [`src/pages/llms.txt.ts`](file:///Users/nabil/_projects/astro-trial/career-portfolio-template/src/pages/llms.txt.ts)).
+## Características Clave :construction:
+-   **Mobile-First Design:** Diseño responsivo que escala desde dispositivos móviles hasta pantallas de escritorio.
+-   **Internacionalización (i18n):** Soporte nativo para Inglés y Español.
+-   **Optimización de Imágenes y Fuentes:** Carga eficiente para maximizar los Web Vitals.
+-   **Despliegue Continuo:** Configurado mediante el archivo `netlify.toml` para un CI/CD automático con Netlify.
 
+## Licencia :door:
+Este proyecto está licenciado bajo la [Licencia MIT](https://opensource.org/licenses/MIT).
 
-
-### 📚 Useful commands and links for reference:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-Tailwind CSS: `npx astro add tailwind`
-
-Inter font: `npm install @fontsource-variable/inter` 
-
-Space Grotesk font: `npm install @fontsource-variable/space-grotesk`
-
-Astro-icon: `npx astro add astro-icon`
-
-Material Desing Icons: `npm install @iconify-json/mdi`
-
-https://docs.astro.build/en/guides/styling/#add-tailwind-4
-
-https://www.astroicon.dev
-
-https://icon-sets.iconify.design/mdi/?category=Material
-
-## 🤝 Contributing
-Contributions are welcome!  
-Please read the [Contributing Guide](CONTRIBUTING.md) before opening a PR.
-
-## 📝 License
-This project is licensed under the [MIT License](LICENSE)
+## Contacto :computer:
+Si te interesa mi trabajo o quieres colaborar, puedes contactarme a través de mi [correo electrónico](mailto:jucarvajal2000@gmail.com).
