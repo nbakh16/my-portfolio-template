@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css'
 import { SITE_CONFIG } from '../config.ts';
+import { assetUrl } from '../utils/path';
 
 interface Props {
   title: string;
@@ -33,12 +34,14 @@ const baseTheme = SITE_CONFIG.baseTheme;
 const defaultTheme = `${baseTheme}-dark`;
 
 // Canonical & OG absolute URLs
-const resolvedSiteUrl = siteUrl || Astro.site?.toString() || '';
-const canonicalUrl = resolvedSiteUrl 
-    ? resolvedSiteUrl.replace(/\/$/, '') + '/' 
-    : Astro.url.href;
+const resolvedSiteUrl = Astro.site?.toString() || siteUrl || '';
+const canonicalUrl = Astro.url.pathname !== '/'
+    ? Astro.url.href
+    : (resolvedSiteUrl
+        ? resolvedSiteUrl.replace(/\/$/, '') + '/'
+        : Astro.url.href);
 const ogImage = ogImageUrl
-    ? new URL(ogImageUrl, resolvedSiteUrl || Astro.url.origin).href
+    ? new URL(assetUrl(ogImageUrl), resolvedSiteUrl || Astro.url.origin).href
     : '';
 
 // JSON-LD Structured Data (WebSite + Person)
@@ -80,9 +83,9 @@ const ogLocale = lang.includes('_') ? lang : `${lang}_${lang.toUpperCase()}`;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/svg+xml" href={assetUrl("/favicon.svg")} />
+    <link rel="icon" type="image/x-icon" href={assetUrl("/favicon.ico")} />
+    <link rel="apple-touch-icon" sizes="180x180" href={assetUrl("/apple-touch-icon.png")} />
     <title>{title}</title>
 
     <!-- PRIMARY META -->

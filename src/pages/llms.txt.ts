@@ -1,8 +1,8 @@
 import type { APIRoute } from 'astro';
-import localHomeData from '../data/home.json';
-import localCareerData from '../data/career.json';
-import localProjectsData from '../data/projects.json';
-import localTechData from '../data/tech.json';
+import localHomeData from '../data/es/home.json';
+import localCareerData from '../data/es/career.json';
+import localProjectsData from '../data/es/projects.json';
+import localTechData from '../data/es/tech.json';
 
 export const GET: APIRoute = async () => {
   const isApiLive = import.meta.env.PROD;

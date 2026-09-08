@@ -3,6 +3,7 @@ import { Icon } from 'astro-icon/components';
 import { Image } from 'astro:assets';
 import { resolveAssetImage } from '../utils/images';
 import { useTranslations } from '../utils/i18n';
+import { assetUrl } from '../utils/path';
 
 const { project, lang = 'es' } = Astro.props;
 const t = useTranslations(lang);
@@ -59,7 +60,7 @@ const platformIconMap: Record<string, string> = {
           ))
         ) : (
           <img
-            src="/placeholder.jpeg"
+            src={assetUrl("/placeholder.jpeg")}
             alt={`${project.title} placeholder`}
             class="absolute inset-0 w-full h-full object-cover transition-all duration-1000 group-hover:scale-110"
           />

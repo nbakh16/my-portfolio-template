@@ -1,4 +1,4 @@
-import homeData from '../data/home.json';
+import homeData from '../data/es/home.json';
 
 export async function GET() {
   const siteUrl = (homeData.siteUrl || '').replace(/\/$/, '');

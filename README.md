@@ -1,73 +1,86 @@
-# Portfolio :briefcase:
+# Portfolio Personal
 
-## By: Julián Camilo Carvajal Mejía
+Portafolio personal y profesional de **Julián Camilo Carvajal Mejía**.
 
 ![Astro](https://img.shields.io/badge/astro-%232C2052.svg?style=for-the-badge&logo=astro&logoColor=white)
-![React Native](https://img.shields.io/badge/react_native-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-![Node.js](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![Netlify](https://img.shields.io/badge/netlify-%2300C7B7.svg?style=for-the-badge&logo=netlify&logoColor=white)
 
-## Tabla de Contenidos :page_with_curl:
-- [Sobre este Portafolio](#sobre-este-portafolio)
-- [Stack Tecnológico](#stack-tecnológico)
-- [Pasos de Instalación](#pasos-de-instalación)
-- [Características Clave](#características-clave)
-- [Licencia](#licencia)
-- [Contacto](#contacto)
+## Requisitos previos
 
-## Sobre este Portafolio :book:
-Este repositorio contiene el código fuente de mi portafolio personal y profesional. Es un sitio web estático diseñado para ser extremadamente rápido, accesible y con un alto rendimiento SEO.
+- [Node.js](https://nodejs.org/) v18 o superior
+- npm o un gestor de paquetes equivalente
 
-Su propósito es mostrar mi experiencia como Desarrollador Junior enfocado en tecnologías **Móviles (React Native)** y **Full Stack (Node.js)**, destacando mi participación en proyectos reales y mi capacidad para adaptarme a entornos ágiles.
+## Instalación
 
-Actualmente desplegado y alojado en **Netlify**.
+```bash
+git clone https://github.com/INOTJuannnka/PortfolioJulian.git
+cd PortfolioJulian
+npm install
+```
 
-## Stack Tecnológico :warning:
-Este proyecto fue construido utilizando las tecnologías modernas del ecosistema web:
+## Variables de entorno
 
-* **[Astro](https://astro.build/):** Framework principal para generar un sitio estático optimizado (SSG).
-* **[Tailwind CSS](https://tailwindcss.com/):** Para el estilizado rápido y sistema de diseño responsivo.
-* **i18n:** Implementación de internacionalización (Español/Inglés) mediante enrutamiento dinámico.
-* **Iconify / Devicon:** Para iconos de habilidades unificados.
+Copia `.env.example` a `.env` y ajusta los valores si es necesario:
 
-## Pasos de Instalación :checkered_flag:
+```bash
+cp .env.example .env
+```
 
-Si deseas correr este proyecto localmente para ver cómo está construido:
+| Variable | Descripción | Default |
+|---|---|---|
+| `PUBLIC_API_URL` | Endpoint de API externa (opcional, usa datos locales en `src/data/` por defecto) | — |
+| `SITE_URL` | URL del sitio para build/producción (ej. `https://INOTJuannnka.github.io`) | Valor de `home.json` |
+| `SITE_BASE` | Base para subruta (ej. `/PortfolioJulian/`). Requerido solo en GitHub Pages de proyecto | — |
 
-1.  **Clona el repositorio**
-    ```bash
-    git clone https://github.com/INOTJuannnka/career-portfolio.git
-    cd career-portfolio
-    ```
+## Scripts disponibles
 
-2.  **Instala las dependencias**
-    Necesitas tener Node.js instalado.
-    ```bash
-    npm install
-    ```
+| Comando | Descripción |
+|---|---|
+| `npm run dev` | Inicia el servidor de desarrollo en `http://localhost:4321` |
+| `npm run build` | Genera el build de producción en `dist/` |
+| `npm run preview` | Previsualiza el build de producción |
 
-3.  **Inicia el servidor de desarrollo**
-    Esto iniciará el servidor local de Astro.
-    ```bash
-    npm run dev
-    ```
-    * El sitio estará disponible en `http://localhost:4321`.
+## Estructura del proyecto
 
-4.  **Compilar para producción (Opcional)**
-    Para generar la carpeta `dist` optimizada:
-    ```bash
-    npm run build
-    ```
+```
+src/
+├── assets/        # Imágenes y recursos estáticos
+├── components/    # Componentes Astro
+├── config.ts      # Configuración general
+├── data/          # Datos del portafolio (JSON)
+├── layouts/       # Layouts base
+├── pages/         # Rutas (index.astro, [lang]/index.astro)
+├── styles/        # Estilos globales
+└── utils/         # Utilidades
+```
 
-## Características Clave :construction:
--   **Mobile-First Design:** Diseño responsivo que escala desde dispositivos móviles hasta pantallas de escritorio.
--   **Internacionalización (i18n):** Soporte nativo para Inglés y Español.
--   **Optimización de Imágenes y Fuentes:** Carga eficiente para maximizar los Web Vitals.
--   **Despliegue Continuo:** Configurado mediante el archivo `netlify.toml` para un CI/CD automático con Netlify.
+## Stack tecnológico
 
-## Licencia :door:
-Este proyecto está licenciado bajo la [Licencia MIT](https://opensource.org/licenses/MIT).
+- **[Astro](https://astro.build/)** — Framework para sitios estáticos (SSG)
+- **[Tailwind CSS](https://tailwindcss.com/)** — Framework de utilidades CSS
+- **[astro-icon](https://www.astroicon.dev/)** — Iconos con Iconify/Devicon
+- **i18n** — Internacionalización (Español/Inglés) mediante enrutamiento dinámico
 
-## Contacto :computer:
-Si te interesa mi trabajo o quieres colaborar, puedes contactarme a través de mi [correo electrónico](mailto:jucarvajal2000@gmail.com).
+## Despliegue
+
+### GitHub Pages
+
+El proyecto incluye un workflow de GitHub Actions (`.github/workflows/deploy.yml`) que construye y despliega el sitio automáticamente en GitHub Pages al hacer push a la rama `master`.
+
+El sitio se publica en: **https://INOTJuannnka.github.io/PortfolioJulian/**
+
+El workflow inyecta `SITE_URL` y `SITE_BASE` en el build para que Astro genere las URLs y los assets con la subruta `/PortfolioJulian/`. Si cambias el usuario o el nombre del repositorio, actualiza ambos valores en el workflow.
+
+Para activarlo:
+
+1. Activa GitHub Pages en tu repositorio con **Source: GitHub Actions** (Settings → Pages).
+2. Haz push de los cambios; el workflow se encargará del build y despliegue.
+
+### Netlify
+
+El proyecto también incluye `netlify.toml` para despliegue automático en Netlify. Para dominio raíz, no se define `SITE_BASE` (Astro usa `/` por defecto).
+
+## Licencia
+
+[MIT](LICENSE)
